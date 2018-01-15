@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+                                           xmlns:content="http://purl.org/rss/1.0/modules/content/"
+                                           xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+                                           xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                           xmlns:atom="http://www.w3.org/2005/Atom"
+                                           xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+                                           xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+>
+
+    <channel>
+        <title>CSS-Tricks</title>
+        <atom:link href="https://css-tricks.com/feed/" rel="self" type="application/rss+xml" />
+        <link>https://css-tricks.com</link>
+        <description>Tips, Tricks, and Techniques on using Cascading Style Sheets.</description>
+        <lastBuildDate>Wed, 18 Oct 2017 18:13:01 +0000</lastBuildDate>
+        <language>en-US</language>
+        <sy:updatePeriod>hourly</sy:updatePeriod>
+        <sy:updateFrequency>1</sy:updateFrequency>
+        <generator>https://wordpress.org/?v=4.8.2</generator>
+        <site xmlns="com-wordpress:feed-additions:1">45537868</site>	<item>
+        <title>A Look Back at the History of CSS</title>
+        <link>https://css-tricks.com/look-back-history-css/</link>
+        <comments>https://css-tricks.com/look-back-history-css/#respond</comments>
+        <pubDate>Wed, 18 Oct 2017 17:00:55 +0000</pubDate>
+        <dc:creator><![CDATA[Jason Hoffman]]></dc:creator>
+        <category><![CDATA[Article]]></category>
+        <category><![CDATA[history]]></category>
+
+        <guid isPermaLink="false">https://css-tricks.com/?p=261090</guid>
+        <description><![CDATA[<p>When you think of HTML and CSS, you probably imagine them as a package deal. But for years after Tim Berners-Lee first created the World Wide Web in 1989, there was no such thing as CSS. The original plan for the web offered no way to style a website at all.</p>
+</p>
+<p>There's a <a href="http://1997.webhistory.org/www.lists/www-talk.1994q1/0648.html">now-infamous post</a> buried in the archives of the WWW mailing list. It was written by Marc Andreessen in 1994, who would go on to co-create both the &#8230;</p>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/look-back-history-css/">A Look Back at the History of CSS</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></description>
+        <content:encoded><![CDATA[<p>When you think of HTML and CSS, you probably imagine them as a package deal. But for years after Tim Berners-Lee first created the World Wide Web in 1989, there was no such thing as CSS. The original plan for the web offered no way to style a website at all.</p>
+<p><span id="more-261090"></span></p>
+<p>There's a <a href="http://1997.webhistory.org/www.lists/www-talk.1994q1/0648.html">now-infamous post</a> buried in the archives of the WWW mailing list. It was written by Marc Andreessen in 1994, who would go on to co-create both the Mosaic and Netscape browsers. In the post, Andreessen remarked that because there was no way to style a website with HTML, the only thing he could tell web developers when asked about visual design was, <em>“s<strong>orry you're screwed.</strong>”</em></p>
+<p>10 years later, CSS was on its way to full adoption by a newly enthused web community. *W**hat happened along the way?*</p>
+<h3>Finding a Styling Language</h3>
+<p>There were plenty of ideas for how the web could theoretically be laid out. However, it just was not a priority for Berners-Lee because his employers at CERN were mostly interested in the web as a digital directory of employees. Instead, we got a <a href="https://eager.io/blog/the-languages-which-almost-were-css/">few competing languages</a> for web page layout from developers across the community, most notably from Pei-Yaun Wei, Andreesen, and Håkon Wium Lie.</p>
+<p>Take Pei-Yuan Wei, who created the graphical ViolaWWW Browser in 1991. He incorporated his own stylesheet language right into his browser, with the eventual goal of turning this language into an official standard for the web. It never quite got there, but it did provide some much-needed inspiration for other potential specifications.</p>
+<figure id="post-261091" class="align-none media-261091"><img src="https://cdn.css-tricks.com/wp-content/uploads/2017/10/screengrab_css-violaWWW.png" srcset="https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_594,f_auto,q_auto/v1507309739/screengrab_css-violaWWW_sk3dwf.png 594w" sizes="(min-width: 1850px) calc( (100vw - 555px) / 3 )
+       (min-width: 1251px) calc( (100vw - 530px) / 2 )
+       (min-width: 1086px) calc(100vw - 480px)
+       (min-width: 626px)  calc(100vw - 335px)
+                           calc(100vw - 30px)" alt="" /><figcaption>ViolaWWW upon release</figcaption></figure>
+<p>In the meantime, Andreessen had taken a different approach in his own browser, Netscape Navigator. Instead of creating a decoupled language devoted to a website's style, he simply extended HTML to include presentational, unstandardized HTML tags that could be used to design web pages. Unfortunately, it wasn't long before web pages lost all semantic value and looked like this:</p>
+<pre rel="HTML"><code class="language-markup">&lt;MULTICOL COLS="3" GUTTER="25"&gt;
+  &lt;P&gt;&lt;FONT SIZE="4" COLOR="RED"&gt;This would be some font broken up into columns&lt;/FONT&gt;&lt;/P&gt;
+&lt;/MULTICOL&gt;</code></pre>
+<p>Programmers were quick to realize that this kind of approach wouldn't last long. There were plenty of ideas for alternatives. Like RRP, a stylesheet language that favored abbreviation and brevity, or PSL96 a language that actually allowed for functions and conditional statements. If you’re interested in what these languages looked like, Zach Bloom wrote <a href="https://eager.io/blog/the-languages-which-almost-were-css/">an excellent deep dive</a> into several competing proposals.</p>
+<p>But the idea that grabbed everyone's attention was first proposed by Håkon Wium Lie in October of 1994. It was called Cascading Style Sheets, or just CSS.</p>
+<h3>Why We Use CSS</h3>
+<p>CSS stood out because it was simple, especially compared to some of its earliest competitors.</p>
+<pre><code>window.margin.left = 2cm
+font.family = times
+h1.font.size = 24pt 30%</code></pre>
+<p>CSS is a <em>declarative</em> programming language. When we write CSS, we don't tell the browser exactly how to render a page. Instead, we <em>describe</em> the rules for our HTML document one by one and let browsers handle the rendering. Keep in mind that the web was mostly being built by amateur programmers and ambitious hobbyists. CSS followed a predictable and perhaps more importantly, forgiving format and just about anyone could pick it up. That's a feature, not a bug.</p>
+<p>CSS was, however, unique in a singular way. It allowed for styles to cascade. It's right there in the name. <em>Cascading</em> Style Sheets. The cascade means that styles can inherit and overwrite other styles that had previously been declared, following a fairly complicated hierarchy known as specificity. The breakthrough, though, was that it allowed for multiple stylesheets on the same page.</p>
+<p>See that percentage value above? That's actually a pretty important bit. Lie believed that both users and designers would define styles in separate stylesheets. The browser, then, could act as a sort of mediator between the two, and negotiate the differences to render a page. That percentage represents just how much ownership this stylesheet is taking for a property. The less ownership, the more likely it was to be overwritten by users. When Lie first demoed CSS, he even showed off a slider that allowed him to toggle between user-defined and developer-defined styles in the browser.</p>
+<p>This was actually a pretty big debate in the early days of CSS. Some believed that developers should have complete control. Others that the user should be in control. In the end, the percentages were removed in favor of more clearly defined rules about which CSS definitions would overwrite others. Anyway, that's why we have specificity.</p>
+<p>Shortly after Lie published his original proposal, he found a partner in Bert Bos. Bos had created the Argo browser, and in the process, his own stylesheet language, pieces of which eventually made its way into CSS. The two began working out a more detailed specification, eventually turning to the newly created HTML working group at the W3C for help.</p>
+<p>It took a few years, but by the end of 1996, the above example had changed.</p>
+<pre rel="CSS"><code>html {
+  margin-left: 2cm;
+  font-family: "Times", serif;
+}
+
+h1 {
+  font-size: 24px;
+}</code></pre>
+<p>CSS had arrived.</p>
+<h3>The Trouble with Browsers</h3>
+<p>While CSS was still just a draft, Netscape had pressed on with presentational HTML elements like <code>multicol</code>, <code>layer</code>, and the dreaded <code>blink</code> tag. Internet Explorer, on the other hand, had taken to incorporating some of CSS piecemeal. But their support was spotty and, at times, incorrect. Which means that by the early aughts, after five years of CSS as an official recommendation, there were still no browsers with full CSS support.</p>
+<p><em>That</em> came from kind of a strange place.</p>
+<p>When Tantek Çelik joined Internet Explorer for Macintosh in 1997, his team was pretty small. A year later, he was made the lead developer of the rendering engine at the same as his team was cut in half. Most of the focus for Microsoft (for obvious reasons) was on the Windows version of Internet Explorer, and the Macintosh team was mostly left to their own devices. <del>So</del> Starting with the development of version 5 in 2000, Çelik and his team decided to put their focus where no one else was, CSS support.</p>
+<figure id="post-261092" class="align-none media-261092"><img src="https://cdn.css-tricks.com/wp-content/uploads/2017/10/screengrab_css-MacOS81.png" srcset="https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_704,f_auto,q_auto/v1507309819/screengrab_css-MacOS81_svlwca.png 704w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_485,f_auto,q_auto/v1507309819/screengrab_css-MacOS81_svlwca.png 485w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_200,f_auto,q_auto/v1507309819/screengrab_css-MacOS81_svlwca.png 200w" sizes="(min-width: 1850px) calc( (100vw - 555px) / 3 )
+       (min-width: 1251px) calc( (100vw - 530px) / 2 )
+       (min-width: 1086px) calc(100vw - 480px)
+       (min-width: 626px)  calc(100vw - 335px)
+                           calc(100vw - 30px)" alt="" /></figure>
+<p>It would take the team two years to finish version 5. During this time, Çelik spoke frequently with members of the W3C and web designers using their browser. As each piece slid into place, the IE-for-Mac team verified on all fronts that they were getting things just right. Finally, in March of 2002, they shipped Internet Explorer 5 for Macintosh. The first browser with full CSS Level 1 support.</p>
+<h3>Doctype Switching</h3>
+<p>But remember, the Windows version of Internet Explorer had added CSS to their browser with more than a few bugs and a screwy box model, which describes the way elements are calculated and then rendered. Internet Explorer included attributes like margin and padding <em>inside</em> the total width and height of an element. But IE5 for Mac, and the official CSS specification called for these values to be <em>added to</em> the width and height. If you ever played around with <code>box-sizing</code> you know exactly the difference.</p>
+<p>Çelik knew that in order to make CSS work, these differences would need to be reconciled. His solution came after a conversation with standards-advocate Todd Fahrner. It's called doctype switching, and it works like this.</p>
+<p>We all know doctypes. They go at the very top of our HTML documents.</p>
+<pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+<p>But in the old days, they looked like this:</p>
+<pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"&gt;</code></pre>
+<p>That's an example of a standards-compliant doctype. The <code>//W3C//DTD HTML 4.0//EN</code> is the crucial bit. When a web designer added this to their page the browser would know to render the page in "standards mode," and CSS would match the specification. If the doctype was missing, or an out of date one was in use, the browser would switch to "quirks mode" and render things according to the old box model and with old bugs intact. Some designers even intentionally opted to put their site into quirks mode in order to get back the older (and incorrect) box model.</p>
+<figure id="post-261093" class="align-none media-261093"><img src="https://cdn.css-tricks.com/wp-content/uploads/2017/10/screengrab_css-quirksmode.jpg" srcset="https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_500,f_auto,q_auto/v1507309852/screengrab_css-quirksmode_didkmb.jpg 500w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_200,f_auto,q_auto/v1507309852/screengrab_css-quirksmode_didkmb.jpg 200w" sizes="(min-width: 1850px) calc( (100vw - 555px) / 3 )
+       (min-width: 1251px) calc( (100vw - 530px) / 2 )
+       (min-width: 1086px) calc(100vw - 480px)
+       (min-width: 626px)  calc(100vw - 335px)
+                           calc(100vw - 30px)" alt="" /></figure>
+<p>Eric Meyer, sometimes referred to as the godfather of CSS, has gone on record and said doctype switching saved CSS. He's probably right. We would still be using browsers packed with old CSS bugs if it weren't for that one, simple trick.</p>
+<h3>The Box Model Hack</h3>
+<p>There was one last thing to figure out. Doctype switching worked fine in modern browsers on older websites, but the box model was still unreliable in older browsers (particularly Internet Explorer) for <em>newer</em> websites. Enter the <a href="http://tantek.com/CSS/Examples/boxmodelhack.html">Box Model Hack</a>, a clever trick from Çelik that took advantage of a little-used CSS attribute called <code>voice-family</code> to trick browsers and allow for multiple widths and heights in the same class. Çelik instructed authors to put their old box model width first, then close the tag in a small hack with <code>voice-family</code>, followed by their new box model width. Sort of like this:</p>
+<pre rel="CSS"><code class="language-css">div.content {
+  width: 400px;
+  voice-family: ""}"";
+  voice-family: inherit;
+  width: 300px;
+}</code></pre>
+<p>Voice-family was not recognized in older browsers, but it did accept a string as its definition. So by adding an extra <code>}</code> older browsers would simply close the CSS rule before ever getting to that second width. It was simple and effective and let a lot of designers start experimenting with new standards quickly.</p>
+<h3>The Pioneers of Standards-Based Design</h3>
+<p>Internet Explorer 6 was released in 2001. It would eventually become a major thorn in the side of web developers everywhere, but it actually shipped with some pretty impressive CSS and standards support. Not to mention its market share hovering around 80%.</p>
+<p>The stage was set, the pieces were in place. CSS was ready for production. Now people just needed to use it.</p>
+<p>In the 10 years that the web hurtled towards ubiquity without a coherent or standard styling language, it's not like designers had simply stopped designing. Not at all. Instead, they relied on a backlog of browser hacks, table-based layouts, and embedded Flash files to add some style when HTML couldn't. Standards-compliant, CSS-based design was new territory. What the web needed was some pioneers to hack a path forward.</p>
+<p>What they got was two major redesigns just a few months apart. The first from <em>Wired</em> followed soon after by <em>ESPN</em>.</p>
+<p>Douglas Bowman was in charge of the web design team for <em>Wired</em> magazine. In 2002, Bowman and his team looked around and saw that no major sites were using CSS in their designs. Bowman felt almost an obligation to a web community that looked to <em>Wired</em> for examples of best practices to redesign their site using the latest, standards-compliant HTML and CSS. He pushed his team to tear everything down and redesign it from scratch. In September of 2002, they pulled it off and launched their redesign. The site even <a href="https://www.w3.org/wiki/Validating_your_HTML">validated</a>.</p>
+<figure id="post-261094" class="align-none media-261094"><img src="https://cdn.css-tricks.com/wp-content/uploads/2017/10/css-wired.gif" srcset="https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_782,f_auto,q_auto/v1507309887/css-wired_xik7fr.gif 782w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_200,f_auto,q_auto/v1507309887/css-wired_xik7fr.gif 200w" sizes="(min-width: 1850px) calc( (100vw - 555px) / 3 )
+       (min-width: 1251px) calc( (100vw - 530px) / 2 )
+       (min-width: 1086px) calc(100vw - 480px)
+       (min-width: 626px)  calc(100vw - 335px)
+                           calc(100vw - 30px)" alt="" /></figure>
+<p>ESPN released their site just a few months later, using many of the same techniques on an even larger scale. These sites took a major bet on CSS, a technology that some thought might not even last. But it paid off in a major way. If you pulled aside any of the developers that worked on these redesigns, they would give you a laundry list of major benefits. More performant, faster design changes, easier to share, and above all, good for the web. Wired even did daily color changes in the beginning.</p>
+<figure id="post-261095" class="align-none media-261095"><img src="https://cdn.css-tricks.com/wp-content/uploads/2017/10/screengrab_css-espn.jpg" srcset="https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_701,f_auto,q_auto/v1507309908/screengrab_css-espn_h3duda.jpg 701w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_567,f_auto,q_auto/v1507309908/screengrab_css-espn_h3duda.jpg 567w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_508,f_auto,q_auto/v1507309908/screengrab_css-espn_h3duda.jpg 508w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_450,f_auto,q_auto/v1507309908/screengrab_css-espn_h3duda.jpg 450w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_331,f_auto,q_auto/v1507309908/screengrab_css-espn_h3duda.jpg 331w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_200,f_auto,q_auto/v1507309908/screengrab_css-espn_h3duda.jpg 200w" sizes="(min-width: 1850px) calc( (100vw - 555px) / 3 )
+       (min-width: 1251px) calc( (100vw - 530px) / 2 )
+       (min-width: 1086px) calc(100vw - 480px)
+       (min-width: 626px)  calc(100vw - 335px)
+                           calc(100vw - 30px)" alt="" /></figure>
+<p>Dig through the code of these redesigns, and you'd be sure to find some hacks. The web still only lived on a few different monitor sizes, so you may notice that both sites used a combination of fixed width columns and relative and absolute positioning to slot a grid into place. Images were used in place of text. But these sites laid the groundwork for what would come next.</p>
+<h3>CSS Zen Garden and the Semantic Web</h3>
+<p>The following year, in 2003, Jeffrey Zeldman published his book <em>Designing with Web Standards</em>, which became a sort of handbook for web designers looking to switch to standards-based design. It kicked off a legacy of CSS techniques and tricks that helped web designers imagine what CSS could do. A year later, Dave Shea launched the CSS Zen Garden, which encouraged designers to take a basic HTML page and lay it out differently using just CSS. The site became a showcase of the latest tips and tricks, and went a long way towards convincing folks it was time for standards.</p>
+<p>Slowly but surely, the momentum built. CSS advanced, and added new attributes. Browsers actually raced to implement the latest standards, and designers and developers added new tricks to their repertoire. And eventually, CSS became the norm. Like it had been there all along.</p>
+<p class="explanation">Enjoy learning about web history? Jay Hoffmann has a weekly newsletter called The History of the Web you can <a href="https://thehistoryoftheweb.com/">sign up for here</a>.</p>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/look-back-history-css/">A Look Back at the History of CSS</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></content:encoded>
+        <wfw:commentRss>https://css-tricks.com/look-back-history-css/feed/</wfw:commentRss>
+        <slash:comments>0</slash:comments>
+        <post-id xmlns="com-wordpress:feed-additions:1">261090</post-id>	</item>
+        <item>
+            <title>On-Site Search</title>
+            <link>https://css-tricks.com/on-site-search/</link>
+            <comments>https://css-tricks.com/on-site-search/#comments</comments>
+            <pubDate>Wed, 18 Oct 2017 13:13:45 +0000</pubDate>
+            <dc:creator><![CDATA[Chris Coyier]]></dc:creator>
+            <category><![CDATA[Article]]></category>
+            <category><![CDATA[search]]></category>
+
+            <guid isPermaLink="false">https://css-tricks.com/?p=261292</guid>
+            <description><![CDATA[<p>CSS-Tricks is a WordPress site. WordPress has <a href="https://codex.wordpress.org/Creating_a_Search_Page">a built-in search feature</a>, but it isn't tremendously useful. I don't blame it, really. Search is a product onto itself and WordPress is a CMS company, not a search company. </p>
+</p>
+<p>You know how you can make <a href="https://codepen.io/chriscoyier/pen/dVwXdm?editors=1011">a really powerful search engine</a> for your site?</p>
+<p>Here you go:</p>
+<p><code class="language-markup">&#60;form action="https://google.com/search" target="_blank" type="GET"&#62;</p>
+<p>  &#60;input type="search" name="q"&#62;<br />
+  &#60;input type="submit" value="search"&#62;</p>
+<p>&#60;/form&#62;</code></p>
+<p>Just a smidge of JavaScript trickery to enforce the site it searches:</p>
+<p><code class="language-javascript">var form </code>&#8230;</p>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/on-site-search/">On-Site Search</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></description>
+            <content:encoded><![CDATA[<p>CSS-Tricks is a WordPress site. WordPress has <a href="https://codex.wordpress.org/Creating_a_Search_Page">a built-in search feature</a>, but it isn't tremendously useful. I don't blame it, really. Search is a product onto itself and WordPress is a CMS company, not a search company. </p>
+<p><span id="more-261292"></span></p>
+<p>You know how you can make <a href="https://codepen.io/chriscoyier/pen/dVwXdm?editors=1011">a really powerful search engine</a> for your site?</p>
+<p>Here you go:</p>
+<pre rel="HTML"><code class="language-markup">&lt;form action="https://google.com/search" target="_blank" type="GET"&gt;
+
+  &lt;input type="search" name="q"&gt;
+  &lt;input type="submit" value="search"&gt;
+
+&lt;/form&gt;</code></pre>
+<p>Just a smidge of JavaScript trickery to enforce the site it searches:</p>
+<pre rel="JavaScript"><code class="language-javascript">var form = document.querySelector("form");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+  var search = form.querySelector("input[type=search]");
+  search.value = "site:css-tricks.com " + search.value;
+  form.submit();
+});</code></pre>
+<p>I'm only 12% joking there. I think sending people over to Google search results for just your site for their search term is perfectly acceptable. Nobody will be confused by that. If anything, they'll be silently pleased.</p>
+<p>Minor adjustments could send them to whatever search engine. Like DuckDuckGo:</p>
+<p><a href="https://duckduckgo.com/?q=site%3Acss-tricks.com+svg">https://duckduckgo.com/?q=site%3Acss-tricks.com+svg</a></p>
+<p>Still:</p>
+<ol>
+<li>They will leave your site</li>
+<li>They will see ads</li>
+</ol>
+<p>To prevent #1, Google has long-offered a site search product where you can create and configure a custom search engine and embed it on your own site. </p>
+<p>There has been lots of news about Google shutting down that service. <a href="https://searchengineland.com/google-site-search-way-now-271366">For example,</a> "Google site search is on the way out. Now what?" Eeek! This was quite confusing to me. </p>
+<p>Turns out, what they are really are shutting down what is known as <a href="https://enterprise.google.com/search/products/gss.html">Google Site Search (GSS)</a>, which is an enterprise product. It shuts down entirely on April 1, 2018. Google has <em>another</em> product called Google <a href="https://cse.google.com/">Custom Search Engine</a> (CSE) that <em>doesn't</em> seem to be going anywhere. </p>
+<p>CSE is the thing I was using anyway. It has a free edition which has ads, and you can pay to remove them, although the pricing for that is also <a href="https://alexjordanseniorproject.wordpress.com/2013/03/05/upgrading-your-custom-search-engine-be-careful/">very confusing</a>. I literally can't figure it out. For a site like CSS-Tricks, it will be hundreds or possibly thousands a year, best I can tell. Or you can hook up your own AdSense and at least attempt to make money off the ads that do show.</p>
+<p>In the wake of all that, I thought I'd try something new with search. <a href="https://www.algolia.com/">Algolia</a> is a search product that I'd heard of quite a few people try, and it seems pretty beloved. With a little help from the wonderfully accommodating Algolia team, we've had that going for the last few months.</p>
+<figure id="post-261468" class="align-none media-261468"><img src="https://cdn.css-tricks.com/wp-content/uploads/2017/10/style-search-1.png" srcset="https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_1000,f_auto,q_auto/v1508332346/style-search-1_twcwwr.png 1000w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_906,f_auto,q_auto/v1508332346/style-search-1_twcwwr.png 906w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_800,f_auto,q_auto/v1508332346/style-search-1_twcwwr.png 800w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_688,f_auto,q_auto/v1508332346/style-search-1_twcwwr.png 688w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_556,f_auto,q_auto/v1508332346/style-search-1_twcwwr.png 556w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_401,f_auto,q_auto/v1508332346/style-search-1_twcwwr.png 401w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_200,f_auto,q_auto/v1508332346/style-search-1_twcwwr.png 200w" sizes="(min-width: 1850px) calc( (100vw - 555px) / 3 )
+       (min-width: 1251px) calc( (100vw - 530px) / 2 )
+       (min-width: 1086px) calc(100vw - 480px)
+       (min-width: 626px)  calc(100vw - 335px)
+                           calc(100vw - 30px)" alt="" /></figure>
+<p>If we were to set up an implementation difficulty scale where my HTML/JavaScript form up there is a 1 and spinning up your own server and feeding <a href="http://lucene.apache.org/solr/">Solr</a> a custom data structure and coming up with your own rating algorithms is a 10, Algolia is like a 7. It's pretty heavy duty nerdy stuff. </p>
+<p>With Alogolia, you need to bring all your own data and stucture and get it over to Algolia, as all the search magic happens on their servers. Any new/changed/deleted data needs to be pushed there too. It's not your database, but generally any database CRUD you do will need to go to Algolia too.</p>
+<p>On that same difficulty scale, if you're adding Algolia to a WordPress site, that goes down to a 3 or 4. WordPress already has it's own data structure and Algolia <a href="https://community.algolia.com/wordpress/">has a WordPress plugin</a> to push it all to them and keep it all in sync. It's not zero work, but it's not too bad. The plugin also offers a UI/UX replacement over the default WordPress search form, which offers "instant results" as a dropdown. It really is amazingly fast. Submit the form anyway, and you're taken to a full-page search results screen that is also taken over by Algolia.</p>
+<p>For disclosure, I'm a paying customer of Algolia and there is no sponsorship deal in place.</p>
+<p>It's a pretty damn good product. As one point of comparison, I've gotten exactly zero feedback on the switch. Nobody has written in to tell me they noticed the change in search and now they can't find things as easily. And people write in to tell me stuff like that all the time, so not-a-peep feels like a win. </p>
+<p>I'm paying $59 a month for superfast on-page search with no ads.</p>
+<p>It's almost a no-brainer win, but there are a few downsides. One of them is the ranking of search results. It's pretty damn impressive out of the box, returning a far more relevant set of results than native WordPress search would. But, no surprise, it's no Google. Whatever internal magic is happening is trying it's best, but it just doesn't have the data Google has. All it has is a bunch of text and maybe some internal linking data. </p>
+<p>There are ways to make it better. For example, you can hook up your Google Analytics data to Algolia, essentially feeding it popularity data, so that Algolia results start to look more like Google results. It's not a trivial to set up, but probably worth it!</p>
+<p>Anyway! </p>
+<p>What do y'all use for search on your sites?</p>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/on-site-search/">On-Site Search</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></content:encoded>
+            <wfw:commentRss>https://css-tricks.com/on-site-search/feed/</wfw:commentRss>
+            <slash:comments>6</slash:comments>
+            <post-id xmlns="com-wordpress:feed-additions:1">261292</post-id>	</item>
+        <item>
+            <title>I haven&#8217;t experienced imposter syndrome, and maybe you haven&#8217;t either</title>
+            <link>https://rachsmith.com/2017/i-dont-have-imposter-syndrome</link>
+            <comments>https://css-tricks.com/havent-experienced-imposter-syndrome-maybe-havent-either/#respond</comments>
+            <pubDate>Tue, 17 Oct 2017 17:31:22 +0000</pubDate>
+            <dc:creator><![CDATA[Chris Coyier]]></dc:creator>
+            <category><![CDATA[Link]]></category>
+
+            <guid isPermaLink="false">https://css-tricks.com/?p=261444</guid>
+            <description><![CDATA[<p>In recent years it’s become trendy to discuss how we all apparently suffer from this imposter syndrome - an inability to internalize one's accomplishments and a persistent fear of being exposed as a “fraud”.</p>
+<p>I take two issues with this:</p>
+<ul>
+<li>it minimizes the impact that this experience has on people that really do suffer from it.</li>
+<li>we’re labelling what should be considered positive personality traits - humility, an acceptance that we can’t be right all the time, a desire to </li>
+</ul>
+<p>&#8230;</p>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/havent-experienced-imposter-syndrome-maybe-havent-either/">I haven&#8217;t experienced imposter syndrome, and maybe you haven&#8217;t either</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></description>
+            <content:encoded><![CDATA[<blockquote>
+<p>In recent years it’s become trendy to discuss how we all apparently suffer from this imposter syndrome - an inability to internalize one's accomplishments and a persistent fear of being exposed as a “fraud”.</p>
+<p>I take two issues with this:</p>
+<ul>
+<li>it minimizes the impact that this experience has on people that really do suffer from it.</li>
+<li>we’re labelling what should be considered positive personality traits - humility, an acceptance that we can’t be right all the time, a desire to know more, as a “syndrome” that we need to “deal with”, “get over” or “get past”.</li>
+</ul>
+</blockquote>
+<p>It's not an officially recognized syndrome (yet?), but you can have medical diagnoses that are like imposter syndrome. A general feeling that you're faking it or don't know as much as you should isn't it.</p>
+<p><a href="https://rachsmith.com/2017/i-dont-have-imposter-syndrome" title="Direct link to featured article">Direct Link to Article</a> &#8212; <a href="https://css-tricks.com/havent-experienced-imposter-syndrome-maybe-havent-either/">Permalink</a></p><hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/havent-experienced-imposter-syndrome-maybe-havent-either/">I haven&#8217;t experienced imposter syndrome, and maybe you haven&#8217;t either</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></content:encoded>
+            <wfw:commentRss>https://css-tricks.com/havent-experienced-imposter-syndrome-maybe-havent-either/feed/</wfw:commentRss>
+            <slash:comments>0</slash:comments>
+            <post-id xmlns="com-wordpress:feed-additions:1">261444</post-id>	</item>
+        <item>
+            <title>Prettier + Stylelint: Writing Very Clean CSS (Or, Keeping Clean Code is a Two-Tool Game)</title>
+            <link>https://css-tricks.com/prettier-stylelint-writing-clean-css-keeping-clean-code-two-tool-game/</link>
+            <comments>https://css-tricks.com/prettier-stylelint-writing-clean-css-keeping-clean-code-two-tool-game/#comments</comments>
+            <pubDate>Tue, 17 Oct 2017 08:58:42 +0000</pubDate>
+            <dc:creator><![CDATA[Chris Coyier]]></dc:creator>
+            <category><![CDATA[Article]]></category>
+            <category><![CDATA[eslint]]></category>
+            <category><![CDATA[linting]]></category>
+            <category><![CDATA[stylelint]]></category>
+
+            <guid isPermaLink="false">https://css-tricks.com/?p=260277</guid>
+            <description><![CDATA[<p>It sure is nice having a whole codebase that is perfectly compliant to a set of code style guidelines. All the files use the same indentation, the same quote style, the same spacing and line-break rules, heck, tiny things like the way zero's in values are handled and how keyframes are named.</p>
+<p>It seems like a tall order, but these days, it's easier than ever. It seems to me it's become a two-tool game:</p>
+<ol>
+<li>A tool to automatically fix easy-to-fix </li>
+</ol>
+<p>&#8230;</p>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/prettier-stylelint-writing-clean-css-keeping-clean-code-two-tool-game/">Prettier + Stylelint: Writing Very Clean CSS (Or, Keeping Clean Code is a Two-Tool Game)</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></description>
+            <content:encoded><![CDATA[<p>It sure is nice having a whole codebase that is perfectly compliant to a set of code style guidelines. All the files use the same indentation, the same quote style, the same spacing and line-break rules, heck, tiny things like the way zero's in values are handled and how keyframes are named.</p>
+<p>It seems like a tall order, but these days, it's easier than ever. It seems to me it's become a two-tool game:</p>
+<ol>
+<li>A tool to automatically fix easy-to-fix problems</li>
+<li>A tool to warn about harder-to-fix problems</li>
+</ol>
+<p><span id="more-260277"></span></p>
+<h3>Half the battle: Prettier</h3>
+<p>Otherwise known as <em>"fix things for me, please".</em></p>
+<p>Best I can tell, <a href="https://prettier.io/">Prettier</a> is a fairly new project, only busting onto the scene in January 2017. Now in the last quarter of 2017, it seems like everybody and their sister is using it. They call it an <strong>Opinionated Code Formatter</strong>. </p>
+<p>The big idea: <strong>upon save of a document, all kinds of code formatting happens automatically.</strong> It's a glorious thing to behold. Indentation and spacing is corrected. Quotes are consistent-ified. Semi colons are added. </p>
+<figure id="post-261355" class="align-none media-261355"><img src="https://cdn.css-tricks.com/wp-content/uploads/2017/10/prettier.gif" srcset="https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_552,f_auto,q_auto/v1508000358/prettier_zuwpwb.gif 552w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_200,f_auto,q_auto/v1508000358/prettier_zuwpwb.gif 200w" sizes="(min-width: 1850px) calc( (100vw - 555px) / 3 )
+       (min-width: 1251px) calc( (100vw - 530px) / 2 )
+       (min-width: 1086px) calc(100vw - 480px)
+       (min-width: 626px)  calc(100vw - 335px)
+                           calc(100vw - 30px)" alt="" /></figure>
+<p>Run Prettier over your codebase once and gone are the muddy commits full of code formatting cruft. (You might consider making a temporary git user so one user doesn't look like they've commited a bazillion lines of code more than another, if you care about that.) That alone is a damn nice benefit. It makes looking through commits a heck of a lot easier and saves a bunch of grunt work.</p>
+<p>As this post suggest, Prettier is only half the battle though. You'll notice that Prettier only supports <a href="https://prettier.io/docs/en/options.html">a handful of options</a>. In fact, I'm pretty sure when it launched it didn't have any configuration at all. Opinionated indeed.</p>
+<p>What it does support are things that are <em>easy to fix</em>, requiring zero human brainpower. Use double quotes accidentally (uggkch muscle memory) when your style guide is single quotes? Boom - changed on save.</p>
+<p>There are other potential problems that aren't as easy to fix. For example, you've used an invalid #HEX code. You probably wouldn't want a computer guessing what you meant there. That's better to just be visually marked as an error for you to fix.</p>
+<p>That's where this next part comes in.</p>
+<h3>The other half of the battle: Stylelint</h3>
+<p>Otherwise known as <em>"let me know about problem, so I can fix them".</em></p>
+<p><a href="https://stylelint.io/">Stylelint</a> is exactly that. In fact, in that GIF above show Prettier do it's thing, you saw some red dots and red outlines in my Sublime Text editor. That <em>wasn't</em> Prettier showing me what it was going to fix (Prettier displays no errors, it just fixes what it can). That was Stylelint running it's linting and showing me those errors.</p>
+<p>Whereas Prettier supports 10ish rules, <strong>Stylelint supports <a href="https://stylelint.io/user-guide/rules/">150ish</a>.</strong> There is <a href="https://github.com/stylelint/stylelint-config-standard">a standard configuration</a>, but you can also get as fine-grained as you want there and configure how you please. David Clark <a href="https://css-tricks.com/stylelint/">wrote about it here</a> on CSS-Tricks last year.</p>
+<figure id="post-261357" class="align-none media-261357"><img src="https://cdn.css-tricks.com/wp-content/uploads/2017/10/stylelint.gif" srcset="https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_632,f_auto,q_auto/v1508001611/stylelint_gullet.gif 632w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_458,f_auto,q_auto/v1508001611/stylelint_gullet.gif 458w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_200,f_auto,q_auto/v1508001611/stylelint_gullet.gif 200w" sizes="(min-width: 1850px) calc( (100vw - 555px) / 3 )
+       (min-width: 1251px) calc( (100vw - 530px) / 2 )
+       (min-width: 1086px) calc(100vw - 480px)
+       (min-width: 626px)  calc(100vw - 335px)
+                           calc(100vw - 30px)" alt="" /></figure>
+<p>With these warnings so clearly visible, you can fix them up by hand quickly. It becomes rather second nature.</p>
+<h3>Getting it all going</h3>
+<p>These tools work in a wide variety of code editors. </p>
+<figure id="post-261361" class="align-none media-261361"><img src="https://cdn.css-tricks.com/wp-content/uploads/2017/10/prettier-edior-integrations.png" srcset="https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_1000,f_auto,q_auto/v1508003908/prettier-edior-integrations_fniri7.png 1000w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_698,f_auto,q_auto/v1508003908/prettier-edior-integrations_fniri7.png 698w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_200,f_auto,q_auto/v1508003908/prettier-edior-integrations_fniri7.png 200w" sizes="(min-width: 1850px) calc( (100vw - 555px) / 3 )
+       (min-width: 1251px) calc( (100vw - 530px) / 2 )
+       (min-width: 1086px) calc(100vw - 480px)
+       (min-width: 626px)  calc(100vw - 335px)
+                           calc(100vw - 30px)" alt="" /><figcaption>These are the Prettier editor integrations. Between all these, that probably covers 96% webdevnerds.</figcaption></figure>
+<p>It's very easy to think <strong>"I'll just install this into my code editor, and it will work!"</strong> That gets me every time. Getting these tools to work is again a two-part game. </p>
+<ol>
+<li><strong>Install code editor plugin.</strong> </li>
+<li><strong>Do the npm / yarn installation stuff.</strong> These are node-based tools. It doesn't mean your project needs to have anything to do with node in production, this is a local development dependency.</li>
+</ol>
+<p>These are intentionally separated things. The meat of these tools is the code that parses your code and figures out the problems it's going to fix. That happens through APIs that other tools can call. That means these tools don't have to be rewritten and ported to work in a new environment, instead, that new environment calls the same APIs everyone else does and does whatever it needs to do with the results.</p>
+<figure id="post-261426" class="align-none media-261426"><img src="https://cdn.css-tricks.com/wp-content/uploads/2017/10/sublime-text.png" srcset="https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_1000,f_auto,q_auto/v1508229688/sublime-text_hla2i3.png 1000w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_814,f_auto,q_auto/v1508229688/sublime-text_hla2i3.png 814w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_200,f_auto,q_auto/v1508229688/sublime-text_hla2i3.png 200w" sizes="(min-width: 1850px) calc( (100vw - 555px) / 3 )
+       (min-width: 1251px) calc( (100vw - 530px) / 2 )
+       (min-width: 1086px) calc(100vw - 480px)
+       (min-width: 626px)  calc(100vw - 335px)
+                           calc(100vw - 30px)" alt="" /></figure>
+<p>Above is a barebones project in Sublime Text with both Prettier and Stylelint installed. Note the `package.json` shows we have our tools installed and I'm listing my "packages" so you can see I have the Sublime Text Plugin <a href="https://packagecontrol.io/packages/JsPrettier#install-prettier">jsPrettier</a> installed. You can also see the dotfiles there that configure the rules for both tools.</p>
+<p>Don't let the "js" part mislead you. You could use this setup on the CSS of your WordPress site. It really doesn't matter what your project is.</p>
+<h3>Getting more exotic</h3>
+<p>There is certainly leveling up that can happen here. For example:</p>
+<ul>
+<li>You might consider configuring Stylelint to <em>ignore problems that Prettier fixes</em>. They are going to be fixed anyway, so why bother looking at the errors.</li>
+<li>You might consider updating your deployment process to stop if Stylelint problems are found. Sometimes Stylelint is showing you an error that will literally cause a problem, so it really shouldn't go to production.</li>
+<li>We mostly talked about CSS here, but JavaScript is arguably even more important to lint (and Prettier supports as well). <a href="https://eslint.org/">ES Lint</a> is probably the way to go here. There are also tools like <a href="https://rubocop.readthedocs.io/en/latest/">Rubocop</a> for Ruby, and I'm sure linters for about every language imaginable.</li>
+</ul>
+<h3>Related</h3>
+<ul>
+<li>Stylelint co-creater David Clark <a href="https://css-tricks.com/stylelint/">introducing Stylelint</a></li>
+<li>Ashley Nolan <a href="https://www.sitepoint.com/taking-css-linting-next-level-stylelint/">on Stylelint</a>, with some interesting history and data</li>
+<li>Stoyan Stefanov on <a href="http://www.phpied.com/hello-stylelint/">integrating Stylelint and TextMate</a></li>
+<li><a href="https://css-tricks.com/enforcing-css-syntax-style/">Enforcing CSS Syntax Style</a></li>
+<li>Artem Sapegin on <a href="https://medium.freecodecamp.org/why-robots-should-format-our-code-159fd06d17f7">Why robots should format our code for us</a></li>
+<li><a href="https://survivejs.com/maintenance/code-quality/code-formatting/">The chapter</a> from SurviveJS on Code Formatting.</li>
+<li><a href="https://github.com/sapegin/mrm">Mrm:</a> Command line tool to help you keep configuration of your open source projects in sync</li>
+</ul>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/prettier-stylelint-writing-clean-css-keeping-clean-code-two-tool-game/">Prettier + Stylelint: Writing Very Clean CSS (Or, Keeping Clean Code is a Two-Tool Game)</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></content:encoded>
+            <wfw:commentRss>https://css-tricks.com/prettier-stylelint-writing-clean-css-keeping-clean-code-two-tool-game/feed/</wfw:commentRss>
+            <slash:comments>9</slash:comments>
+            <post-id xmlns="com-wordpress:feed-additions:1">260277</post-id>	</item>
+        <item>
+            <title>The Art of Comments</title>
+            <link>https://css-tricks.com/the-art-of-comments/</link>
+            <comments>https://css-tricks.com/the-art-of-comments/#comments</comments>
+            <pubDate>Mon, 16 Oct 2017 15:23:47 +0000</pubDate>
+            <dc:creator><![CDATA[Sarah Drasner]]></dc:creator>
+            <category><![CDATA[Article]]></category>
+            <category><![CDATA[commenting]]></category>
+
+            <guid isPermaLink="false">https://css-tricks.com/?p=260879</guid>
+            <description><![CDATA[<p>I believe commenting code is important. Most of all, I believe commenting is misunderstood. <a href="https://twitter.com/sarah_edo/status/914946197051252736">I tweeted out</a> the other day that "I hear conflicting opinions on whether or not you should write comments. But I get thank you's from junior devs for writing them so I'll continue." The responses I received were varied, but what caught my eye was that for every person agreeing that commenting was necessary, they all had different reasons for believing this. </p>
+</p>
+<p>Commenting is a more &#8230;</p>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/the-art-of-comments/">The Art of Comments</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></description>
+            <content:encoded><![CDATA[<p>I believe commenting code is important. Most of all, I believe commenting is misunderstood. <a href="https://twitter.com/sarah_edo/status/914946197051252736">I tweeted out</a> the other day that "I hear conflicting opinions on whether or not you should write comments. But I get thank you's from junior devs for writing them so I'll continue." The responses I received were varied, but what caught my eye was that for every person agreeing that commenting was necessary, they all had different reasons for believing this. </p>
+<p><span id="more-260879"></span></p>
+<p>Commenting is a more nuanced thing than we give it credit for. There is no nomenclature for commenting (not that there should be) but lumping all comments together is an oversimplification. The example in this comic that was tweeted in response is true:</p>
+<figure id="post-260880" class="align-right media-260880"><img src="https://cdn.css-tricks.com/wp-content/uploads/2017/10/DLKxcnZUQAAFQkI.jpg" srcset="https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_744,f_auto,q_auto/v1507084911/DLKxcnZUQAAFQkI_nec1cd.jpg 744w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_674,f_auto,q_auto/v1507084911/DLKxcnZUQAAFQkI_nec1cd.jpg 674w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_601,f_auto,q_auto/v1507084911/DLKxcnZUQAAFQkI_nec1cd.jpg 601w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_488,f_auto,q_auto/v1507084911/DLKxcnZUQAAFQkI_nec1cd.jpg 488w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_367,f_auto,q_auto/v1507084911/DLKxcnZUQAAFQkI_nec1cd.jpg 367w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_200,f_auto,q_auto/v1507084911/DLKxcnZUQAAFQkI_nec1cd.jpg 200w" sizes="(min-width: 1850px) calc( (100vw - 555px) / 3 )
+       (min-width: 1251px) calc( (100vw - 530px) / 2 )
+       (min-width: 1086px) calc(100vw - 480px)
+       (min-width: 626px)  calc(100vw - 335px)
+                           calc(100vw - 30px)" alt="comic exploring code in real life with bad this is a bridge comment" /><figcaption>From Abstrusegoose</figcaption></figure>
+<p>This is where I think a lot of the misconceptions of comments lie. The book <a href="http://amzn.to/2xEQHzf">Clean Code</a> by Robert C. Martin talks about this: that comments shouldn't be necessary because code should be self-documenting. That if you feel a comment is necessary, you should rewrite it to be more legible. I both agree and disagree with this. In the process of writing a comment, you can often find things that could be written better, but it's not an either/or. I might still be able to rewrite that code to be more self-documenting and also write a comment as well, for the following reason:</p>
+<p><strong><em>Code can describe how, but it cannot explain why.</em></strong></p>
+<p>This isn't a new concept, but it's a common theme I notice in helpful comments that I have come across. The ability to communicate something that the code cannot, or cannot concisely.</p>
+<p>All of that said, there is just not one right way or one reason to write a comment. In order to better learn, let's dig into some of the many beneficial <strong><em>types</em></strong> of comments that might all serve a different purpose, followed by patterns we might want to avoid.</p>
+<h3>Good comments</h3>
+<h4>What is the Why</h4>
+<p>Many examples of good comments can be housed under this category. Code explains what you'd like the computer to take action on. You'll hear people talk about declarative code because it describes the logic precisely but without describing all of the steps like a recipe. It lets the computer do the heavy lifting. We could also write our comments to be a bit more declarative</p>
+<pre><code class="language-javascript">/*
+  We had to write this function because the browser
+  interprets that everything is a box
+*/</code></pre>
+<p>This doesn't describe what the code below it will do. It doesn't describe the actions it will take. But if you found a more elegant way of rewriting this function, you could feel confident in doing so because your code is likely the solution to the same problem in a different way.</p>
+<p>Because of this, less maintenance is required (we'll dig more into this further on). If you found a better way to write this, you probably wouldn't need to rewrite the comment. You could also quickly understand whether you could rewrite another section of code to make this function unnecessary without spending a long time parsing all the steps to make the whole.</p>
+<h4>Clarifying something that is not legible by regular human beings</h4>
+<p>When you look at a long line of regex, can you immediately grok what's going on? If you can, you're in the minority, and even if you can at this moment, you might not be able to next year. What about a browser hack? Have you ever seen this in your code? </p>
+<pre rel="CSS"><code class="language-css">.selector { [;property: value;]; }</code></pre>
+<p>what about </p>
+<pre rel="JavaScript"><code class="language-javascript">var isFF = /a/[-1]=='a';</code></pre>
+<p>The first one targets Chrome ≤ 28, Safari ≤ 7, Opera ≥ 14, the second one is Firefox versions 2-3. I have written code that needs something like this. In order to avoid another maintainer or a future me assuming I took some Salvia before heading to work that day, it's great to tell people what the heck that's for. Especially in preparation for a time when we don't have to support that browser anymore, or the browser bug is fixed and we can remove it.</p>
+<h4>Something that is clear and legible to you is not necessarily clear to others</h4>
+<p>Who's smart? We are! Who writes clean code? We do! We don't have to comment, look how clear it is. The problem with this way of thinking is that we all have deeper knowledge in different areas. On small teams where people's skillsets and expertise are more of a circle than a venn diagram, this is less of an issue than big groups that change teams or get junior devs or interns frequently. But I'd probably still make room for those newcomers or for future you. On bigger teams where there are junior engineers or even just engineers from all types of background, people might not outrightly tell you they need you to comment, but many of these people will also express gratitude when you do.</p>
+<h4>Comments like chapters of a book</h4>
+<p>If this very article was written as one big hunk rather than broken up into sections with whitespace and smaller headings, it would be harder to skim through. Maybe not all of what I'm saying applies to you. Commenting sections or pieces allows people to skip to a part most relevant to them. But alas! You say. We have functional programming, imports, and modules for this now. </p>
+<p>It's true! We break things down into smaller bits so that they are more manageable, and thank goodness for that. But even in smaller sections of code, you'll necessarily come to a piece that has to be a bit longer. Being able quickly grasp what is relevant or a label for an area that's a bit different can speed up productivity.</p>
+<h4>A guide to keep the logic straight while writing the code</h4>
+<p>This one is an interesting one! These are not the kind of comments you keep, and thus could also be found in the "bad patterns" section. Many times when I'm working on a bigger project with a lot of moving parts, breaking things up into the actions I'm going to take is extremely helpful. This could look like </p>
+<pre rel="JavaScript"><code class="language-javascript">// get the request from the server and give an error if it failed
+// do x thing with that request
+// format the data like so</code></pre>
+<p>Then I can easily focus on one thing at a time. But when left in your code as is, these comments can be screwy to read later. They're so useful while you're writing it but once you're finished can merely be a duplication of what the code does, forcing the reader to read the same thing twice in two different ways. It doesn't make them any less valuable to write, though.</p>
+<p>My perfect-world suggestion would be to use these comments at the time of writing and then revisit them after. As you delete them, you could ask "does this do this in the most elegant and legible way possible?" "Is there another comment I might replace this with that will explain why this is necessary?" "What would I think is the most useful thing to express to future me or other from another mother?"</p>
+<h4>This is OK to refactor</h4>
+<p>Have you ever had a really aggressive product deadline? Perhaps you implemented a feature that you yourself disagreed with, or they told you it was "temporary" and "just an AB test so it doesn't matter". *Cue horror music* … and then it lived on… forever…</p>
+<p>As embarrassing as it might be, writing comments like </p>
+<pre rel="JavaScript"><code class="language-javascript">// this isn't my best work, we had to get it in by the deadline</code></pre>
+<p>is rather helpful. As a maintainer, when I run across comments like this, I'll save buckets of time trying to figure out what the heck is wrong with this person and envisioning ways I could sabotage their morning commute. I'll immediately stop trying to figure out what parts of this code I should preserve and instead focus on what can be refactored. The only warning I'll give is to try not to make this type of coding your fallback (we'll discuss this in detail further on).</p>
+<h4>Commenting as a teaching tool</h4>
+<p>Are you a PHP shop that just was given a client that's all Ruby? Maybe it's totally standard Ruby but your team is in slightly over their heads. Are you writing a tutorial for someone? These are the limited examples for when writing out the how can be helpful. The person is literally learning on the spot and might not be able to just infer what it's doing because they've never seen it before in their lives. Comment that sh*t. Learning is humbling enough without them having to ask you aloud what they could more easily learn on their own.</p>
+<h4>I StackOverflow'd the bejeezus outta this</h4>
+<p>Did you just copy paste a whole block of code from Stack Overflow and modify it to fit your needs? This isn't a great practice but we've all been there. Something I've done that's saved me in the past is to put the link to the post where I found it. But! Then we won't get credit for that code! You might say. You're optimizing for the wrong thing would be my answer. </p>
+<p>Inevitably people have different coding styles and the author of the solution solved a problem in a different way than you would if you knew the area deeper. Why does this matter? Because later, you might be smarter. You might level up in this area and then you'll spend less time scratching your head at why you wrote it that way, or learn from the other person's approach. Plus, you can always look back at the post, and see if any new replies came in that shed more light on the subject. There might even be another, better answer later.</p>
+<h3>Bad Comments</h3>
+<p>Writing comments gets a bad wrap sometimes, and that's because bad comments do indeed exist. Let's talk about some things to avoid while writing them.</p>
+<p>They just say what it's already doing</p>
+<p>John Papa made the accurate joke that this:</p>
+<pre rel="JavaScript"><code class="language-javascript">// if foo equals bar ...
+If (foo === bar) {
+
+} // end if</code></pre>
+<p>is a big pain. Why? Because you're actually reading everything twice in two different ways. It gives no more information, in fact, it makes you have to process things in two different formats, which is mental overhead rather than helpful. We've all written comments like this. Perhaps because we didn't understand it well enough ourselves or we were overly worried about reading it later. For whatever the reason, it's always good to take a step back and try to look at the code and comment from the perspective of someone reading it rather than you as the author, if you can.</p>
+<h4>It wasn't maintained</h4>
+<p>Bad documentation can be worse than no documentation. There's nothing more frustrating than coming across a block of code where the comment says something completely different than what's expressed below. Worse than time-wasting, it's misleading. </p>
+<p>One solution to this is making sure that whatever code you are updating, you're maintaining the comments as well. And certainly having <em>less</em> and only more meaningful comments makes this upkeep less arduous. But commenting and maintaining comments are all part of an engineer's job. <strong>The comment is in your code, it is your job to work on it, even if it means deleting it.</strong></p>
+<p>If your comments are of good quality to begin with, and express why and not the how, you may find that this problem takes care of itself. For instance, if I write</p>
+<pre rel="JavaScript"><code class="language-javascript">// we need to FLIP this animation to be more performant in every browser</code></pre>
+<p>and refactor this code later to go from using <code>getBoundingClientRect()</code> to <code>getBBox()</code>, the comment still applies. The function exists for the same reason, but the details of how are what has changed.</p>
+<h4>You could have used a better name</h4>
+<p>I've definitely seen people write code (or done this myself) where the variable or functions names are one letter, and then comment what the thing is. This is a waste. We all hate typing, but if you are using a variable or function name repeatedly, I don't want to scan up the whole document where you explained what the name itself could do. I get it, naming is hard. But some comments take the place of something that could easily be written more precisely.</p>
+<h4>The comments are an excuse for not writing the code better to begin with</h4>
+<p>This is the crux of the issue for a lot of people. If you are writing code that is haphazard, and leaning back on your comments to clarify, this means the comments are holding back your programming. This is a horse-behind-the-cart kind of scenario. Unfortunately, even as the author it's not so easy to determine which is which. </p>
+<p>We lie to ourselves in myriad ways. We might spend the time writing a comment that could be better spent making the code cleaner to begin with. We might also tell ourselves we don't need to comment our code because our code is well-written, even if other people might not agree. </p>
+<p>There are lazy crutches in both directions. Just do your best. Try not to rely on just one correct way and instead write your code, and then read it. Try to envision you are both the author and maintainer, or how that code might look to a younger you. What information would you need to be as productive as possible?</p>
+<hr>
+<p>People tend to, lately, get on one side or the other of "whether you should write comments", but I would argue that that conversation is not nuanced enough. Hopefully opening the floor to a deeper conversation about how to write meaningful comments bridges the gap.</p>
+<p>Even so, it can be a lot to parse. Haha get it? Anyways, I'll leave you with some (better) humor. A while back there was a Stack Overflow post about the best comments people have written or seen. You can definitely waste some time in here. <a href="https://stackoverflow.com/questions/184618/what-is-the-best-comment-in-source-code-you-have-ever-encountered/482129#482129">Pretty funny stuff</a>.</p>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/the-art-of-comments/">The Art of Comments</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></content:encoded>
+            <wfw:commentRss>https://css-tricks.com/the-art-of-comments/feed/</wfw:commentRss>
+            <slash:comments>8</slash:comments>
+            <post-id xmlns="com-wordpress:feed-additions:1">260879</post-id>	</item>
+        <item>
+            <title>Getting Nowhere on Job Titles</title>
+            <link>https://css-tricks.com/getting-nowhere-job-titles/</link>
+            <comments>https://css-tricks.com/getting-nowhere-job-titles/#comments</comments>
+            <pubDate>Mon, 16 Oct 2017 07:37:23 +0000</pubDate>
+            <dc:creator><![CDATA[Chris Coyier]]></dc:creator>
+            <category><![CDATA[Article]]></category>
+            <category><![CDATA[job titles]]></category>
+
+            <guid isPermaLink="false">https://css-tricks.com/?p=261271</guid>
+            <description><![CDATA[<p><a href="http://shoptalkshow.com/episodes/284-value-html-css-mandy-michael-lara-schenck/">Last week on ShopTalk</a>, Dave and I spoke with Mandy Michael and Lara Schenck. Mandy had just written the intentionally provocative <a href="https://medium.com/@mandy.michael/is-there-any-value-in-people-who-cannot-write-javascript-d0a66b16de06">"Is there any value in people who cannot write JavaScript?"</a> which guided our conversation. Lara is deeply interested in this subject as well, as someone who is a job seeking web worker, but places herself on the spectrum as <a href="https://css-tricks.com/tales-of-a-non-unicorn-a-story-about-the-trouble-with-job-titles-and-descriptions/">a non-unicorn</a>. </p>
+</p>
+<p>Part of that discussion was about job titles. If there was a ubiquitously accepted and used &#8230;</p>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/getting-nowhere-job-titles/">Getting Nowhere on Job Titles</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></description>
+            <content:encoded><![CDATA[<p><a href="http://shoptalkshow.com/episodes/284-value-html-css-mandy-michael-lara-schenck/">Last week on ShopTalk</a>, Dave and I spoke with Mandy Michael and Lara Schenck. Mandy had just written the intentionally provocative <a href="https://medium.com/@mandy.michael/is-there-any-value-in-people-who-cannot-write-javascript-d0a66b16de06">"Is there any value in people who cannot write JavaScript?"</a> which guided our conversation. Lara is deeply interested in this subject as well, as someone who is a job seeking web worker, but places herself on the spectrum as <a href="https://css-tricks.com/tales-of-a-non-unicorn-a-story-about-the-trouble-with-job-titles-and-descriptions/">a non-unicorn</a>. </p>
+<p><span id="more-261271"></span></p>
+<p>Part of that discussion was about job titles. If there was a ubiquitously accepted and used job title that meant you were specifically skilled at HTML and CSS, and there was a market for that job title, there probably wouldn't be any problem at all. There isn't though. "Web developer" is too vague. "Front-end developer" maybe used to mean that, but has been largely co-opted by JavaScript.</p>
+<p>In fact, you might say that none of us has an exactly perfect job title and the industry at large has trouble agreeing on a set of job titles.</p>
+<p>Lara <a href="https://github.com/laras126/front-end-discourse">created a repo</a> with the intent to think all this out and discuss it. </p>
+<p>If there is already a spectrum between design and backend development, and front-end development is that place in between, perhaps front-end development, if we zoon in, is a spectrum as well:</p>
+<figure id="post-261377" class="align-none media-261377"><img src="https://cdn.css-tricks.com/wp-content/uploads/2017/10/spectrum.png" srcset="https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_1000,f_auto,q_auto/v1508012683/spectrum_jyn9gl.png 1000w, https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_200,f_auto,q_auto/v1508012683/spectrum_jyn9gl.png 200w" sizes="(min-width: 1850px) calc( (100vw - 555px) / 3 )
+       (min-width: 1251px) calc( (100vw - 530px) / 2 )
+       (min-width: 1086px) calc(100vw - 480px)
+       (min-width: 626px)  calc(100vw - 335px)
+                           calc(100vw - 30px)" alt="" /></figure>
+<p>I like the idea of spectrums, but I also agree with a comment by Sarah Drasner where she mentioned that this makes it seem like you can't be good at both. If you're a dot right in the middle in this specrum, you are, for example, not as good at JavaScript as someone on the right. </p>
+<p>This could probably be fixed with some different dataviz (perhaps the size of the dot), or, heaven forbid, skill-level bars. </p>
+<p>More importantly, if you're really interested in the discussion around all this, Lara has <a href="https://github.com/laras126/front-end-discourse/issues">used the issues area to open that up</a>.</p>
+<p>Last year, Geoff also <a href="https://css-tricks.com/ever-evolving-spectrum-web/">started thinking about</a> all our web jobs as a spectrum. We can break up our jobs into parts and map them onto those parts in differnet ways:</p>
+<p data-height="400" data-theme-id="25" data-slug-hash="grvVYR" data-default-tab="result" data-user="geoffgraham" class="codepen">See the Pen <a href="http://codepen.io/geoffgraham/pen/grvVYR/">Web Terminology Matrix</a> by Geoff Graham (<a href="http://codepen.io/geoffgraham">@geoffgraham</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="900" data-theme-id="25" data-slug-hash="JXMxWZ" data-default-tab="result" data-user="geoffgraham" class="codepen">See the Pen <a href="http://codepen.io/geoffgraham/pen/JXMxWZ/">Web Terminology Venn Diagram</a> by Geoff Graham (<a href="http://codepen.io/geoffgraham">@geoffgraham</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p>That can certainly help us understand our world a little bit, but doesn't quite help with the job titles thing. It's unlikely we'll get people to write job descriptions that include a data visualization of what they are looking for. </p>
+<p>Jeff Pelletier <a href="https://hackernoon.com/front-end-roles-and-responsibilities-6ee8654f1649">took a crack at job titles</a> and narrowed it down to three:</p>
+<blockquote>
+<p><strong>Front-end Implementation</strong> (responsive web design, modular/scalable CSS, UI frameworks, living style guides, progressive enhancement & accessibility, animation and front-end performance).</p>
+<p><strong>Application Development</strong> (JavaScript frameworks, JavaScript preprocessors, code quality, process automation, testing).</p>
+<p><strong>Front-end Operations</strong> (build tools, deployment, speed: (app, tests, builds, deploys), monitoring errors/logs, and stability).</p>
+</blockquote>
+<p>Although those don't quite feel like <em>titles</em> to me and converting them into something like "Front-end implementation developer" doesn't seem like something that will catch on.</p>
+<p>Cody Lindley's Front-End Developer Handbook <a href="https://frontendmasters.com/books/front-end-handbook/2017/practice/types-of-front-end-dev.html">has a section on job titles</a>. I won't quote it in full, but they are:</p>
+<ul>
+<li>Front-End Developer</li>
+<li>Front-End Engineer (aka JavaScript Developer or Full-stack JavaScript Developer)</li>
+<li>CSS/HTML Developer</li>
+<li>Front-End Web Designer</li>
+<li>Web/Front-End User Interface (aka UI) Developer/Engineer</li>
+<li>Mobile/Tablet Front-End Developer</li>
+<li>Front-End SEO Expert</li>
+<li>Front-End Accessibility Expert</li>
+<li>Front-End Dev. Ops</li>
+<li>Front-End Testing/QA</li>
+</ul>
+<p>Note the contentious "<a href="http://bradfrost.com/blog/post/full-stack-developers/">full stack" title</a>, in which Brad Frost says:</p>
+<blockquote><p>In my experience, “full-stack developers” always translates to “programmers who can do frontend code because they have to and it’s ‘easy’.” It’s never the other way around.</p></blockquote>
+<p>Still, these largely feel pretty good to me. And yet weirdly, almost like there is both too many and too few. As in, while there is good coverage here, but if you are going to cover specialties, you might as well add in performance, copywriting, analytics, and more as well. The more you add, the further away we are to locking things down. Not to mention the harder it becomes when people crossover these disciplines, like they almost always do.</p>
+<p>Oh well.</p>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/getting-nowhere-job-titles/">Getting Nowhere on Job Titles</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></content:encoded>
+            <wfw:commentRss>https://css-tricks.com/getting-nowhere-job-titles/feed/</wfw:commentRss>
+            <slash:comments>16</slash:comments>
+            <post-id xmlns="com-wordpress:feed-additions:1">261271</post-id>	</item>
+        <item>
+            <title>A Bit on Buttons</title>
+            <link>https://css-tricks.com/a-bit-on-buttons/</link>
+            <comments>https://css-tricks.com/a-bit-on-buttons/#comments</comments>
+            <pubDate>Sat, 14 Oct 2017 14:46:47 +0000</pubDate>
+            <dc:creator><![CDATA[Chris Coyier]]></dc:creator>
+            <category><![CDATA[Article]]></category>
+            <category><![CDATA[button]]></category>
+
+            <guid isPermaLink="false">https://css-tricks.com/?p=261335</guid>
+            <description><![CDATA[<p>Here's three recent things that have come across my desk in recent days regarding buttons. One, an accessibility flub that needed to be fixed. Two, an article about the fundamental differences between links and buttons but how they can look too similar for our own good. Three, the logical extreme of the button element: never use them outside of forms unless injected with JavaScript.</p>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/a-bit-on-buttons/">A Bit on Buttons</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></description>
+            <content:encoded><![CDATA[<h3>1</h3>
+<p>The other day we published <a href="https://css-tricks.com/making-pure-css-playpause-button/">an article</a> with a bonafide CSS trick where an element with a double border could look like a pause icon, and morph nicely into a <a href="https://css-tricks.com/snippets/css/css-triangle/">CSS triangle</a> looking like a play icon. It was originally published with a <code>&lt;div&gt;</code> being the demo element, which was a total accessibility flub on our part, as something intended to be interacted with like this is really a <code>&lt;button&gt;</code>.</p>
+<p>It also included a demo using <a href="https://css-tricks.com/the-checkbox-hack/">the checkbox hack</a> to toggle the state of the button. That changes the keyboard interaction from a "return" click to a "space bar" toggle, but more importantly should have had a <code>:focus</code> state to indicate the button (actually a label) was interactive at all.</p>
+<p>Both have been fixed.</p>
+<h3>2</h3>
+<p>Adam Silver has an interesting post where the title does a good job of setting up the issue:</p>
+<p><a href="https://medium.com/simple-human/but-sometimes-links-look-like-buttons-and-buttons-look-like-links-9b371c57b3d2">But sometimes links look like buttons (and buttons look like links)</a></p>
+<p>Buttons that are buttons aren't contentious (e.g. a form submit button). Links that are links aren't contentious. The trouble comes in when we cross the streams.</p>
+<blockquote><p>Buttons (that have type="button") are not submit buttons. Buttons are used to create features that rely on Javascript. Behaviours such as revealing a menu or showing a date picker.</p></blockquote>
+<p>A call-to-action "button" is his good example on the other side. They are often just links that are styled like a button for prominence. This whole passage is important:</p>
+<blockquote>
+<p>In <a href="https://resilientwebdesign.com/">Resilient Web Design</a> Jeremy Keith discusses the idea of material honesty. He says that “one material should not be used as a substitute for another, otherwise the end result is deceptive”.</p>
+<p>Making a link look like a button is materially dishonest. It tells users that links and buttons are the same when they’re not.</p>
+<p>In <a href="https://medium.com/eightshapes-llc/buttons-in-design-systems-eac3acf7e23">Buttons In Design Systems</a> Nathan Curtis says that we should distinguish links from buttons because “button behaviours bring a whole host of distinct considerations from your simple anchor tag”.</p>
+<p>For example, we can open a link in a new tab, copy the address or bookmark it for later. All of which we can’t do with buttons.</p>
+<p>Call to action buttons— which again, are just links — are deceptive. Users are blissfully unaware because this styling removes their natural affordance, obscuring their behaviour.</p>
+<p>We could make call to action buttons look like regular links. But this makes them visually weak which negates their prominence. Hence the problem.</p>
+</blockquote>
+<p>I find even amongst <code>&lt;button&gt;</code>s you can have issues, since what those buttons do are often quite different. For example, the <b>Fork</b> button on CodePen takes you to a brand new page with a new copy of a Pen, which feels a bit like clicking a link. But it's <em>not</em> a link, which means it behaves differently and <a href="https://blog.codepen.io/2017/08/16/open-fork-new-tab/">requires explanation</a>. </p>
+<h3>3</h3>
+<p>I'll repeat Adam again here:</p>
+<blockquote><p>Buttons are used to create features that rely on Javascript.</p></blockquote>
+<p>Buttons within a <code>&lt;form&gt;</code> have functionality without JavaScript, but that is the only place. </p>
+<p>Meaning, a <code>&lt;button&gt;</code> is entirely useless in HTML unless JavaScript is successfully downloaded and executed. </p>
+<p>Taken to an extreme logical conclusion, you should <em>never</em> use a <code>&lt;button&gt;</code> (or <code>type="button"</code>) in HTML outside of a form. Since JavaScript is required for the button to do anything, you should <em>inject the button into place with JavaScript</em> once it's functionality is already ready to go.</p>
+<p>Or if that's not possible...</p>
+<pre rel="HTML"><code class="language-markup">&lt;button disabled title="This button will become functional once JavaScript is downloaded and executed"&gt;
+  Do Thing
+&lt;/button&gt;</code></pre>
+<p>Then change those attributes once ready.</p>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/a-bit-on-buttons/">A Bit on Buttons</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></content:encoded>
+            <wfw:commentRss>https://css-tricks.com/a-bit-on-buttons/feed/</wfw:commentRss>
+            <slash:comments>11</slash:comments>
+            <post-id xmlns="com-wordpress:feed-additions:1">261335</post-id>	</item>
+        <item>
+            <title>Writing Smarter Animation Code</title>
+            <link>https://css-tricks.com/writing-smarter-animation-code/</link>
+            <comments>https://css-tricks.com/writing-smarter-animation-code/#comments</comments>
+            <pubDate>Fri, 13 Oct 2017 15:02:15 +0000</pubDate>
+            <dc:creator><![CDATA[Carl Schooff]]></dc:creator>
+            <category><![CDATA[Article]]></category>
+            <category><![CDATA[animation]]></category>
+            <category><![CDATA[GreenSock]]></category>
+
+            <guid isPermaLink="false">https://css-tricks.com/?p=260146</guid>
+            <description><![CDATA[<p>If you've ever coded an animation that's longer than 10 seconds with dozens or even hundreds of choreographed elements, you know how challenging it can be to avoid the dreaded "wall of code". Worse yet, editing an animation that was built by someone else (or even yourself 2 months ago) can be nightmarish. </p>
+<p>In these videos, I'll show you the techniques that the pros use keep their code clean, manageable, and easy to revise. Scripted animation provides you the opportunity &#8230;</p>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/writing-smarter-animation-code/">Writing Smarter Animation Code</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></description>
+            <content:encoded><![CDATA[<p>If you've ever coded an animation that's longer than 10 seconds with dozens or even hundreds of choreographed elements, you know how challenging it can be to avoid the dreaded "wall of code". Worse yet, editing an animation that was built by someone else (or even yourself 2 months ago) can be nightmarish. </p>
+<p>In these videos, I'll show you the techniques that the pros use keep their code clean, manageable, and easy to revise. Scripted animation provides you the opportunity to create animations that are incredibly dynamic and flexible. My goal is for you to <strong>have fun</strong> without getting bogged down by the process.</p>
+<p>We'll be using <a href="https://greensock.com/gsap/">GSAP</a> for all the animation. If you haven't used it yet, you'll quickly see why it's so popular - the workflow benefits are substantial. </p>
+<p><span id="more-260146"></span></p>
+<p data-height="328" data-theme-id="1" data-slug-hash="4bffdb4fc44f09fcb4c4e8f1c8f46298" data-default-tab="js,result" data-user="GreenSock" data-embed-version="2" data-pen-title="SVG Wars: May the morph be with you. (Craig Roblewsky)" class="codepen">See the Pen <a href="https://codepen.io/GreenSock/pen/4bffdb4fc44f09fcb4c4e8f1c8f46298">SVG Wars: May the morph be with you. (Craig Roblewsky) on <a href="https://codepen.io">CodePen</a>.</p>
+<p>The demo above from Craig Roblewsky is a great example of the types of complex animations I want to help you build.</p>
+<p>This article is intended for those who have a basic understanding of <a href="https://greensock.com/gsap/">GSAP</a> and want to approach their code in a smarter, more efficient way. However, even if you haven't used GSAP, or prefer another animation tool, I think you'll be intrigued by these solutions to some of the common problems that all animators face. Sit back, watch and enjoy!</p>
+<h3>Video 1: Overview of the techniques</h3>
+<p>The video below will give you a quick behind-the-scenes look at how Craig structured his code in the SVG Wars animation and the many benefits of these workflow strategies.</p>
+<figure><iframe width="560" height="315" src="https://www.youtube.com/embed/ZbTI85lmu9Q" frameborder="0" allowfullscreen></iframe></figure>
+<p>Although this is a detailed and complex animation, the code is surprisingly easy to work with. It's written using the same approach that we at GreenSock use for any animation longer than a few seconds. The secret to this technique is two-fold:</p>
+<ol>
+<li>Break your animation into smaller timelines that get glued together in a master (parent) timeline.</li>
+<li>Use functions to create and return those smaller timelines.</li>
+</ol>
+<p>This makes your code modular and easy to edit. </p>
+<h3>Video 2: Detailed Example</h3>
+<p>I'll show you exactly how to build a sequence using functions that create and return timelines. You'll see how packing everything into one big timeline (no modular nesting) results in the intimidating "Wall of Code". I'll then break the animation down into separate timelines and use a parameterized function that does all the heavy lifting with <strong>60% less code!</strong></p>
+<figure><iframe width="560" height="315" src="https://www.youtube.com/embed/8ETMjqhQRCs" frameborder="0" allowfullscreen></iframe></figure>
+<p>Let's review the key points... </p>
+<h3>Avoid the dreaded wall of code</h3>
+<p>A common strategy (especially for beginners) is to create one big timeline containing all of the animation code. Although a timeline offers tons of features that accommodate this style of coding, it's just a basic reality of any programming endeavor that too much code in one place will become unwieldy.</p>
+<p>Let's upgrade the code so that we can apply the same techniques Craig used in the SVG wars animation...</p>
+<p data-height="328" data-theme-id="1" data-slug-hash="9c95f01742c6f7855b1cc46d5d27d382" data-default-tab="js,result" data-user="GreenSock" data-embed-version="2" data-pen-title="Wall of Code" class="codepen">See the Pen <a href="https://codepen.io/GreenSock/pen/9c95f01742c6f7855b1cc46d5d27d382">Wall of Code on <a href="https://codepen.io">CodePen</a>.</p>
+<p>Be sure to investigate the code in the "JS" tab. Even for something this simple, the code can be hard to scan and edit, especially for someone new to the project. Imagine if that timeline had 100 lines. Mentally parsing it all can be a chore. </p>
+<h3>Create a separate timeline for each panel</h3>
+<p>By separating the animation for each panel into its own timeline, the code becomes easier to read and edit.</p>
+<pre rel="JavaScript"><code class="language-javascript">var panel1 = new TimelineLite();
+panel1.from(...);
+  ...
+
+var panel2 = new TimelineLite();
+panel2.from(...);
+  ...
+
+var panel3 = new TimelineLite();
+panel3.from(...);
+  ...</code></pre>
+<p>Now it's much easier to do a quick scan and find the code for <strong>panel2</strong>. However, when these timelines are created they will all play instantly, but we want them sequenced. </p>
+<p data-height="328" data-theme-id="1" data-slug-hash="jwpXLg" data-default-tab="js,result" data-user="GreenSock" data-embed-version="2" data-pen-title="Separate Timelines" class="codepen"><a href="https://codepen.io/GreenSock/pen/jwpXLg">See the Pen</a></p>
+<p>No problem - just nest them in a parent timeline in whatever order we want.</p>
+<h3>Nest each timeline using add()</h3>
+<p>One of the greatest features of GSAP's timeline tools (<a href="http://greensock.com/timelinelite">TimelineLite</a> / <a href="http://greensock.com/timelinemax">TimelineMax</a>) is the ability to nest animations as deeply as you want (place timelines inside of other timelines). </p>
+<p>The <a href="https://greensock.com/docs/TimelineMax/add()">add()</a> method allows you add any tween, timeline, label or callback anywhere in a timeline. By default, things are placed at the end of the timeline which is perfect for sequencing. In order to schedule these 3 timelines to run in succession we will add each of them to a master timeline like so:</p>
+<pre rel="JavaScript"><code class="language-javascript">//create a new parent timeline
+var master = new TimelineMax();
+
+//add child timelines
+master.add(panel1)
+  .add(panel2)
+  .add(panel3);</code></pre>
+<p>Demo with all code for this stage:</p>
+<p data-height="328" data-theme-id="1" data-slug-hash="e5f80c71f7291eb2ed3b265ebf02b03c" data-default-tab="js,result" data-user="GreenSock" data-embed-version="2" data-pen-title="Separate Timelines Nested" class="codepen"><a href="https://codepen.io/GreenSock/pen/e5f80c71f7291eb2ed3b265ebf02b03c">See the Pen</a></p>
+<p>The animation looks the same, but the code is much more refined and easy to parse mentally.<br />
+Some key benefits of nesting timelines are that you can:</p>
+<ul>
+<li>Scan the code more easily.</li>
+<li>Change the order of sections by just moving the add() code.</li>
+<li>Change the speed of an individual timeline.</li>
+<li>Make one section repeat multiple times.</li>
+<li>Have precise control over the placement of each timeline using the <a href="http://greensock.com/position-parameter">position parameter</a> (beyond the scope of this article).</li>
+</ul>
+<h3>Use functions to create and return timelines</h3>
+<p>The last step in optimizing this code is to create a function that generates the animations for each panel. Functions are inherently powerful in that they:</p>
+<ul>
+<li>Can be called many times.</li>
+<li>Can be parameterized in order to vary the animations they build.</li>
+<li>Allow you to define local variables that won't conflict with other code.</li>
+</ul>
+<p>Since each panel is built using the same HTML structure and the same animation style, there is a lot of repetitive code that we can eliminate by using a function to create the timelines. Simply tell that function which panel to operate on and it will do the rest. </p>
+<p>Our function takes in a single <strong>panel</strong> parameter that is used in the selector string for all the tweens in the timeline:</p>
+<pre rel="JavaScript"><code class="language-javascript">function createPanel(panel) {
+  var tl = new TimelineLite();
+  tl.from(panel + " .bg", 0.4, {scale:0, ease:Power1.easeInOut})
+    .from(panel + " .bg", 0.3, {rotation:90, ease:Power1.easeInOut}, 0)
+    .staggerFrom(panel + " .text span", 1.1, {y:-50, opacity:0, ease:Elastic.easeOut}, 0.06)
+    .addLabel("out", "+=1")
+      .staggerTo(panel + " .text span", 0.3, {opacity:0, y:50, ease:Power1.easeIn}, -0.06, "out")
+    .to(panel + " .bg", 0.4, {scale:0, rotation:-90, ease:Power1.easeInOut});
+  return tl; //very important that the timeline gets returned
+}</code></pre>
+<p>We can then build a sequence out of all the timelines by placing each one in a parent timeline using <code>add()</code>.</p>
+<pre rel="JavaScript"><code class="language-javascript">var master = new TimelineMax();
+master.add(createPanel(".panel1"))
+  .add(createPanel(".panel2"))
+  .add(createPanel(".panel3"));</code></pre>
+<p>Completed demo with full code:</p>
+<p data-height="328" data-theme-id="1" data-slug-hash="457937b91f05262a85a49145e7c8da32" data-default-tab="js,result" data-user="GreenSock" data-embed-version="2" data-pen-title="Nested timelines with functions" class="codepen"><a href="https://codepen.io/GreenSock/pen/457937b91f05262a85a49145e7c8da32">See the Pen</a></p>
+<p>This animation was purposefully designed to be relatively simple and use one function that could do all the heavy lifting. Your real-world projects may have more variance but even if each child animation is unique, I still recommend using functions to create each section of your complex animations. </p>
+<p>Check out this example in the wonderful pen from Sarah Drasner that's built using functions that return timelines to illustrate how to do exactly that!</p>
+<p data-height="328" data-theme-id="1" data-slug-hash="Wramvo" data-default-tab="js,result" data-user="sdras" data-embed-version="2" data-pen-title="Responsive GreenSock-Teaching Monster" class="codepen"><a href="https://codepen.io/sdras/pen/Wramvo">See the Pen</a></p>
+<p>And of course the same technique is used on the main GSAP page animation:</p>
+<p data-height="328" data-theme-id="1" data-slug-hash="f4c03f17e9b8c60b0e6d5c8c09fb719f" data-default-tab="js,result" data-user="GreenSock" data-embed-version="2" data-pen-title="GSDevTools (Beta) with GSAP Animation" class="codepen"><a href="https://codepen.io/GreenSock/pen/f4c03f17e9b8c60b0e6d5c8c09fb719f">See the Pen</a></p>
+<h3>GSDevTools</h3>
+<p>You may have noticed that fancy timeline controller used in some of the demos and the videos. <a href="http://greensock.com/gsdevtools">GSDevTools</a> was designed to super-charge your workflow by allowing you to quickly navigate and control any GSAP tween or timeline. To find out more about GSDevTools visit <a href="http://greensock.com/gsdevtools">greensock.com/GSDevTools</a>.</p>
+<h3>Conclusion</h3>
+<p>Next time you've got a moderately complex animation project, try these techniques and see how much more fun it is and how quickly you can experiment. Your coworkers will sing your praises when they need to edit one of your animations. Once you get the hang of modularizing your code and tapping into GSAP's advanced capabilities, it'll probably open up a whole new world of possibilities. Don't forget to use functions to handle repetitive tasks.  </p>
+<p>As with all projects, you'll probably have a client or art director ask:</p>
+<ul>
+<li><em>"Can you slow the whole thing down a bit?"</em></li>
+<li><em>"Can you take that 10-second part in the middle and move it to the end?"</em></li>
+<li><em>"Can you speed up the end and make it loop a few times?"</em></li>
+<li><em>"Can you jump to that part at the end so I can check the copy?"</em></li>
+<li><em>"Can we add this new, stupid idea I just thought of in the middle?"</em></li>
+</ul>
+<p>Previously, these requests would trigger a panic attack and put the entire project at risk, but now you can simply say <em>"gimme 2 seconds..."</em></p>
+<h3>Additional Resources</h3>
+<p>To find out more about GSAP and what it can do, check out the following links:</p>
+<ul>
+<li><a href="https://greensock.com/gsap">GreenSock Animation Platform (GSAP)</a></li>
+<li><a href="https://greensock.com/get-started-js">GSAP Getting Started Guide</a></li>
+<li><a href="https://www.nobledesktop.com/html5-greensock-video-class-gsap?a=ox7">Official GSAP Video Training</a></li>
+<li><a href="https://greensock.com/docs">GSAP Documentation</a></li>
+<li><a href="https://greensock.com/examples-showcases">GSAP Showcase</a></li>
+<li><a href="https://greensock.com/forums">GreenSock Support Forums</a></li>
+<li><a href="https://greensock.com/gsdevtools">GSDevTools</a></li>
+<li><a href="https://greensock.com/club/">Club GreenSock (get bonus plugins/tools)</a></li>
+</ul>
+<p class="explanation">CSS-Tricks readers can use the coupon code <b>CSS-Tricks</b> for 25% off a <a href="https://greensock.com/club/?ref=30488">Club GreenSock</a> membership which gets you a bunch of extras like <a href="https://greensock.com/morphSVG/?ref=30488">MorphSVG</a> and <a href="https://greensock.com/gsdevtools/?ref=30488">GSDevTools</a> (referenced in this article). Valid through 11/14/2017.</p>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/writing-smarter-animation-code/">Writing Smarter Animation Code</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></content:encoded>
+            <wfw:commentRss>https://css-tricks.com/writing-smarter-animation-code/feed/</wfw:commentRss>
+            <slash:comments>2</slash:comments>
+            <post-id xmlns="com-wordpress:feed-additions:1">260146</post-id>	</item>
+        <item>
+            <title>CSS-Tricks Chronicle XXXII</title>
+            <link>https://css-tricks.com/css-tricks-chronicle-xxxii/</link>
+            <comments>https://css-tricks.com/css-tricks-chronicle-xxxii/#respond</comments>
+            <pubDate>Fri, 13 Oct 2017 14:28:12 +0000</pubDate>
+            <dc:creator><![CDATA[Chris Coyier]]></dc:creator>
+            <category><![CDATA[Article]]></category>
+            <category><![CDATA[Chronicle]]></category>
+
+            <guid isPermaLink="false">https://css-tricks.com/?p=261177</guid>
+            <description><![CDATA[<p>Hey y'all! Time for a quick Chronicle post where I get to touch on and link up some of the happenings around the site that I haven't gotten to elsewhere.</p>
+</p>
+<hr />
+<p>Technologically around here, there have been a few small-but-interesting changes. </p>
+<p>Site search is and has been powered by Algolia the last few months. I started up writing some thoughts about that here, and it got long enough I figured I'd crack it off into it's own blog post, so look &#8230;</p>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/css-tricks-chronicle-xxxii/">CSS-Tricks Chronicle XXXII</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></description>
+            <content:encoded><![CDATA[<p>Hey y'all! Time for a quick Chronicle post where I get to touch on and link up some of the happenings around the site that I haven't gotten to elsewhere.</p>
+<p><span id="more-261177"></span></p>
+<hr>
+<p>Technologically around here, there have been a few small-but-interesting changes. </p>
+<p>Site search is and has been powered by Algolia the last few months. I started up writing some thoughts about that here, and it got long enough I figured I'd crack it off into it's own blog post, so look forward to that soon.</p>
+<p>Another service I've started making use of is Cloudinary. Cloudinary is an image CDN, so it's serving most of the image assets here now, and we're squeezing as much performance out of that as we possibly can. Similar to Algolia, it has a WordPress plugin that does a lot of the heavy lifting. We're still working out some kinks as well. If you're interested in how that all goes down, Eric Portis and I <a href="https://css-tricks.com/video-screencasts/155-responsive-images-wordpress-cloudinary/">did a screencast</a> about it not too long ago.</p>
+<hr>
+<p>We hit that big <a href="https://css-tricks.com/the-tenth-fourth/">10-year milestone</a> not too long ago. It feels both like <em>heck yes</em> and like <em>just another year</em>, in the sense that trucking right along is what we do best.</p>
+<p>We still have <a href="https://css-tricks.com/shop/">plenty of nerdy shirts</a> (free shipping) I printed up to sorta celebrate that anniversary, but still be generic and fun.</p>
+<hr>
+<p>As I type, I'm sitting in New Orleans after CSS Dev Conf just wrapped up. Well, a day after that, because after such an amazing and immersive event, and a full day workshop where I talk all day long, I needed to fall into what my wife calls "an introvert hole" for an entire day of recovery.</p>
+<p>From here, I fly to Barcelona for <a href="https://smashingconf.com/">Smashing Conf</a> which is October 17-18. </p>
+<p>The last two conferences for me this year will be An Event Apart <a href="https://aneventapart.com/event/san-francisco-2017">San Francisco</a> in late October and <a href="https://aneventapart.com/event/denver-2017">Denver</a> in mid-December.</p>
+<p>Next year will be <em>much</em> lighter on conference travel. Between having a daughter on the way, wanting more time at home, and desiring a break, I won't be on the circuit too much next year. Definitely a few though, and I do have at least one big fun surprise to talk about soon.</p>
+<hr>
+<p>CodePen has been hard at work, as ever. Sometimes our releases are new public features, <a href="https://blog.codepen.io/2017/08/29/say-hello-new-dashboard/">like the new Dashboard</a>. Sometimes the work is mostly internal. For example, we undertook a major rewriting of our payment system so that we could be much more flexible in how we structure plans and what payment providers we could use. For example, <a href="https://blog.codepen.io/2017/09/26/144-integrating-braintree/">we now use Braintree</a> in addition to Stripe, so that we could make PayPal a first-class checkout citizen like many users expect.</p>
+<p>It's the same story as I write. We're working on big projects some of which users will see and directly be able to use, and some of which are infrastructural that make CodePen better from the other side.</p>
+<p>Did you know the <a href="https://css-tricks.com/jobs/">CSS-Tricks Job Board</a> is powered by the CodePen Job Board? Post in one place, it goes to both. Plus, if you just wanna try it out and see if it's effective for your company, <a href="https://blog.codepen.io/2017/09/20/hiring-front-end-developersdesigners-try-codepen-job-board-free/">it's free</a>. </p>
+<hr>
+<p>We don't really have official "seasons" on <a href="http://shoptalkshow.com/">ShopTalk</a>, but sometimes we think of it that way. As this year approaches a close, we know we'll be taking at least a few weeks off, making somewhat of a seasonal break. </p>
+<p>Our format somewhat slowly morphs over time, but we still often have guests and still answer questions, the heart of ShopTalk Show. Our loose plan moving forward is to be even more flexible with the format, with more experimental shows and unusual guests. After all, the show is on such a niche topic anyway (in the grand scheme of things) that we don't plan to change, we might as well have the flexibility to do interesting things that still circle around, educate, and entertain around web design and development.</p>
+<hr>
+<p>I've gotten to be a guest on some podcasts recently!</p>
+<ul>
+<li>Inspect: <a href="http://inspect.fm/episodes/10/">Interview with Chris Coyier</a></li>
+<li>Bureau Briefing: <a href="http://bureauofdigital.com/blog/2017/9/7/building-community">Building Community</a></li>
+<li>Daily Two Minutes of Greatness: <a href="http://twominutesofgreatness.com/2017/07/31/ep-027-chris-coyier-persistence-stubbornness-building-css-tricks/">Persistence, Stubbornness, & building CSS-Tricks</a></li>
+</ul>
+<p>I also got to do a written interview with Steve Domino for Nanobox, <a href="https://codeheroes.nanobox.io/interviews/chris-coyier/">The Art of Development</a>. Plus, Sparkbox wrote up a recap of my recent workshop there, <a href="https://seesparkbox.com/foundry/maker_series_recap_chris_coyier">Maker Series Recap: Chris Coyier</a>.</p>
+<hr>
+<p>Personally, I've completed my move out to Bend, Oregon! I'm loving Bend so far and look forward to calling it home for many years to come. For the first time ever, I have my own office. Well, it's a shared room in a shared office, but we all went in on it together and it's <em>ours</em>. We're moved in and decking it out over the coming months and it's been fun and feels good.</p>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/css-tricks-chronicle-xxxii/">CSS-Tricks Chronicle XXXII</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></content:encoded>
+            <wfw:commentRss>https://css-tricks.com/css-tricks-chronicle-xxxii/feed/</wfw:commentRss>
+            <slash:comments>0</slash:comments>
+            <post-id xmlns="com-wordpress:feed-additions:1">261177</post-id>	</item>
+        <item>
+            <title>Let There Be Peace on CSS</title>
+            <link>https://medium.com/@didoo/let-there-be-peace-on-css-8b26829f1be0</link>
+            <comments>https://css-tricks.com/let-peace-css/#respond</comments>
+            <pubDate>Fri, 13 Oct 2017 14:16:22 +0000</pubDate>
+            <dc:creator><![CDATA[Chris Coyier]]></dc:creator>
+            <category><![CDATA[Link]]></category>
+
+            <guid isPermaLink="false">https://css-tricks.com/?p=261297</guid>
+            <description><![CDATA[<p>Cristiano Rastelli:</p>
+<p>In the last few months there’s been a growing friction between those who see CSS as an untouchable layer in the “separation of concerns” paradigm, and those who have simply ignored this golden rule and have found different ways to style the UI, typically applying CSS styles via JavaScript.</p>
+<p>He does a great job of framing the "problem", exploring the history, and pointing to things that make this seem rather war-like, including one of my own! </p>
+<p>As Cristiano &#8230;</p>
+<hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/let-peace-css/">Let There Be Peace on CSS</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></description>
+            <content:encoded><![CDATA[<p>Cristiano Rastelli:</p>
+<blockquote><p>In the last few months there’s been a growing friction between those who see CSS as an untouchable layer in the “separation of concerns” paradigm, and those who have simply ignored this golden rule and have found different ways to style the UI, typically applying CSS styles via JavaScript.</p></blockquote>
+<p>He does a great job of framing the "problem", exploring the history, and pointing to things that make this seem rather war-like, including one of my own! </p>
+<p>As Cristiano also makes clear that it's not so much a war but a young community still figuring out things, solving problems for ourselves, and zigzagging through time waiting for this to shake out.</p>
+<blockquote>
+<p>So, here are my suggestions:</p>
+<ol>
+<li>Embrace the ever-changing nature of the web.</li>
+<li>Be careful with your words: they can hurt.</li>
+<li>Be pragmatic, non dogmatic. But most of all, be curious.</li>
+</ol>
+</blockquote>
+<p><a href="https://medium.com/@didoo/let-there-be-peace-on-css-8b26829f1be0" title="Direct link to featured article">Direct Link to Article</a> &#8212; <a href="https://css-tricks.com/let-peace-css/">Permalink</a></p><hr />
+<p><small><a rel="nofollow" href="https://css-tricks.com/let-peace-css/">Let There Be Peace on CSS</a> is a post from <a rel="nofollow" href="https://css-tricks.com">CSS-Tricks</a></small></p>
+]]></content:encoded>
+            <wfw:commentRss>https://css-tricks.com/let-peace-css/feed/</wfw:commentRss>
+            <slash:comments>0</slash:comments>
+            <post-id xmlns="com-wordpress:feed-additions:1">261297</post-id>	</item>
+    </channel>
+</rss>
